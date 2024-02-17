@@ -1,0 +1,11 @@
+<!-- meal-details.component.html -->
+<div *ngIf="meals.length > 0">
+    <h2>{{ meals[0].name }}</h2>
+    <p>{{ meals[0].description }}</p>
+    <img *ngIf="meals[0].photoUrl" [src]="meals[0].photoUrl" alt="Meal Photo">
+    <video *ngIf="meals[0].videoUrl" controls>
+        <source [src]="meals[0].videoUrl" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Afficher d'autres détails du repas -->
+</div>
